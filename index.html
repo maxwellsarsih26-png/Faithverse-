@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaithVerse - The Holy Bible</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>FaithVerse</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#old-testament">Old Testament</a></li>
+                <li><a href="#new-testament">New Testament</a></li>
+                <li><a href="#daily-verse">Daily Verse</a></li>
+                <li><a href="#search">Search</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <button id="theme-toggle">🌙</button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 id="hero-title">Welcome to FaithVerse</h1>
+            <p class="hero-quote">"For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life." - John 3:16</p>
+            <button class="btn-primary" onclick="scrollToSection('old-testament')">Start Reading</button>
+        </div>
+    </section>
+
+    <!-- Bible Books Section -->
+    <section id="books" class="books-section">
+        <div class="container">
+            <h2>Explore the Bible</h2>
+            <div class="books-container">
+                <div id="old-testament" class="book-category">
+                    <h3>Old Testament</h3>
+                    <div class="books-grid">
+                        <!-- Books will be populated by JavaScript -->
+                    </div>
+                </div>
+                <div id="new-testament" class="book-category">
+                    <h3>New Testament</h3>
+                    <div class="books-grid">
+                        <!-- Books will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Verse Reading Section -->
+    <section id="reading" class="reading-section">
+        <div class="container">
+            <h2>Verse Reading</h2>
+            <div class="reading-content">
+                <div class="chapter-selector">
+                    <select id="book-select">
+                        <option value="">Select a Book</option>
+                    </select>
+                    <select id="chapter-select">
+                        <option value="">Select a Chapter</option>
+                    </select>
+                    <select id="verse-select" disabled>
+                        <option value="">Select a Verse</option>
+                    </select>
+                </div>
+                <div id="verse-display" class="verse-display">
+                    <p>Select a book and chapter to start reading.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daily Verse Section -->
+    <section id="daily-verse" class="daily-verse-section">
+        <div class="container">
+            <h2>Daily Verse</h2>
+            <div class="verse-card">
+                <p id="daily-verse-text">Loading daily verse...</p>
+                <button class="btn-secondary" id="new-daily-verse">Get New Verse</button>
+                <button class="btn-favorite" id="favorite-verse">❤️ Favorite</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section id="search" class="search-section">
+        <div class="container">
+            <h2>Search the Bible</h2>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Enter keywords to search...">
+                <button class="btn-primary" id="search-btn">Search</button>
+            </div>
+            <div id="search-results" class="search-results">
+                <!-- Search results will appear here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About FaithVerse</h2>
+            <p>FaithVerse is your digital companion for exploring the Holy Bible. Discover timeless wisdom, find inspiration, and deepen your faith through interactive reading and study tools.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FaithVerse</h3>
+                    <p>Your gateway to biblical wisdom.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link">� WhatsApp</a>
+                        <a href="#" class="social-link">🐦 Twitter</a>
+                        <a href="#" class="social-link">📷 Instagram</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#old-testament">Old Testament</a></li>
+                        <li><a href="#new-testament">New Testament</a></li>
+                        <li><a href="#daily-verse">Daily Verse</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FaithVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Animation -->
+    <div id="loading" class="loading">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
